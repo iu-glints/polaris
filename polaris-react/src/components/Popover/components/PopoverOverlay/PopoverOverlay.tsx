@@ -259,7 +259,7 @@ export class PopoverOverlay extends PureComponent<PopoverOverlayProps, State> {
 
     return (
       <div className={className} {...overlay.props}>
-        <EventListener event="click" handler={this.handleClick} />
+        <EventListener event="click" handler={this.handleClick} capture />
         <EventListener event="touchstart" handler={this.handleClick} />
         <KeypressListener keyCode={Key.Escape} handler={this.handleEscape} />
         <div
